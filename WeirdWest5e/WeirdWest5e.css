@@ -238,6 +238,7 @@ div:last-child.sheet-subsection-nontable-row {
 /**********************/
 
 /* section decorations */
+/*
 .sheet-scroll-roll {
 	height: 16px;
 	background-image: url("https://raw.githubusercontent.com/cyanobacterium/Roll20-DnD5E-Character-Scrolls/master/scroll-roll.png");
@@ -259,6 +260,7 @@ div:last-child.sheet-subsection-nontable-row {
 	background: url("https://raw.githubusercontent.com/cyanobacterium/Roll20-DnD5E-Character-Scrolls/master/section-content-background.png") no-repeat;
 	background-size: 100% 100%
 }
+*/
 /***************************/
 
 /* spell notes hiding */

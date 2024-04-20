@@ -211,7 +211,7 @@ Author: C. C. Hall (aka Cyanobacterium)
 								<tr>
 									<!-- start of row -->
 									<td>
-										<div class="sheet-icon-large sheet-icon-charisma"> </div>
+										<div class="sheet-icon sheet-icon-mount"> </div>
 									</td><td style="vertical-align:middle;">
 										<div class="sheet-big-bold">LUCK</div><div class="sheet-undertext sheet-text-align-center">Luck</div>
 									</td><td style="vertical-align:middle;">
@@ -692,6 +692,81 @@ Author: C. C. Hall (aka Cyanobacterium)
 									</td><td>
 										<button class="sheet-roll-button" type="roll" value="/roll ?{d20 Roll|Normal,1d20 |With Advantage,2d20dl1 |With Disadvantage,2d20dh1} + @{skill2} for a @{skill2_name} check" name="roll_skill2"></button>
 									</td>
+								<tr>
+									<!-- end of row -->
+									<!-- start of row -->
+									<td colspan="2">
+										<input type="text" name="attr_skill3_name" value="" style="width:7em">
+										<select class="sheet-numbox"  style="width:4em; margin-top: 6px;" name="attr_skill3_ability_mod">
+											<option value="@{strength_mod}">Str</option>
+											<option value="@{dexterity_mod}">Dex</option>
+											<option value="@{constitution_mod}">Con</option>
+											<option value="@{intelligence_mod}">Int</option>
+											<option value="@{wisdom_mod}">Wis</option>
+											<option value="@{charisma_mod}">Cha</option>
+										</select>
+									</td><td>
+										<select class="sheet-numbox" style="margin-top: 6px;" name="attr_skill3_prof">
+											<option value="0">0</option>
+											<option value="floor(@{prof} / 2)">½P</option>
+											<option value="@{prof}">P</option>
+											<option value="(2*@{prof})">2×P</option>
+										</select>
+									</td><td>
+										+<input class="sheet-numbox" style="margin-top: 6px;" type="number" name="attr_skill3" value="@{skill3_prof}+@{skill3_ability_mod}" disabled="disabled">
+									</td><td>
+										<button class="sheet-roll-button" type="roll" value="/roll ?{d20 Roll|Normal,1d20 |With Advantage,2d20dl1 |With Disadvantage,2d20dh1} + @{skill2} for a @{skill3_name} check" name="roll_skill3"></button>
+									</td>
+								<tr>
+									<!-- end of row -->
+									<!-- start of row -->
+									<td colspan="2">
+										<input type="text" name="attr_skill4_name" value="" style="width:7em">
+										<select class="sheet-numbox"  style="width:4em; margin-top: 6px;" name="attr_skill4_ability_mod">
+											<option value="@{strength_mod}">Str</option>
+											<option value="@{dexterity_mod}">Dex</option>
+											<option value="@{constitution_mod}">Con</option>
+											<option value="@{intelligence_mod}">Int</option>
+											<option value="@{wisdom_mod}">Wis</option>
+											<option value="@{charisma_mod}">Cha</option>
+										</select>
+									</td><td>
+										<select class="sheet-numbox" style="margin-top: 6px;" name="attr_skill4_prof">
+											<option value="0">0</option>
+											<option value="floor(@{prof} / 2)">½P</option>
+											<option value="@{prof}">P</option>
+											<option value="(2*@{prof})">2×P</option>
+										</select>
+									</td><td>
+										+<input class="sheet-numbox" style="margin-top: 6px;" type="number" name="attr_skill4" value="@{skill4_prof}+@{skill4_ability_mod}" disabled="disabled">
+									</td><td>
+										<button class="sheet-roll-button" type="roll" value="/roll ?{d20 Roll|Normal,1d20 |With Advantage,2d20dl1 |With Disadvantage,2d20dh1} + @{skill4} for a @{skill4_name} check" name="roll_skill4"></button>
+									</td>
+									<tr>
+									<!-- end of row -->
+									<!-- start of row -->
+									<td colspan="2">
+										<input type="text" name="attr_skill5_name" value="" style="width:7em">
+										<select class="sheet-numbox"  style="width:4em; margin-top: 6px;" name="attr_skill5_ability_mod">
+											<option value="@{strength_mod}">Str</option>
+											<option value="@{dexterity_mod}">Dex</option>
+											<option value="@{constitution_mod}">Con</option>
+											<option value="@{intelligence_mod}">Int</option>
+											<option value="@{wisdom_mod}">Wis</option>
+											<option value="@{charisma_mod}">Cha</option>
+										</select>
+									</td><td>
+										<select class="sheet-numbox" style="margin-top: 6px;" name="attr_skill5_prof">
+											<option value="0">0</option>
+											<option value="floor(@{prof} / 2)">½P</option>
+											<option value="@{prof}">P</option>
+											<option value="(2*@{prof})">2×P</option>
+										</select>
+									</td><td>
+										+<input class="sheet-numbox" style="margin-top: 6px;" type="number" name="attr_skill5" value="@{skill5_prof}+@{skill5_ability_mod}" disabled="disabled">
+									</td><td>
+										<button class="sheet-roll-button" type="roll" value="/roll ?{d20 Roll|Normal,1d20 |With Advantage,2d20dl1 |With Disadvantage,2d20dh1} + @{skill5} for a @{skill5_name} check" name="roll_skill5"></button>
+									</td>
 									<!-- end of row -->
 								</tr>
 							</table>
@@ -752,21 +827,8 @@ Author: C. C. Hall (aka Cyanobacterium)
 							</div>
 							
 							<!-- fill-ins -->
-							<div class="sheet-half-width" style="vertical-align:top;">
-								<div class="sheet-undertext">Alignment</div>
-								<select style="width: 100%"  name="attr_alignment">
-									<option value="None">Unaligned</option>
-									<option value="LG">Lawful Good</option>
-									<option value="NG">Good</option>
-									<option value="CG">Chaotic Good</option>
-									<option value="LN">Lawful Neutral</option>
-									<option value="N">Neutral</option>
-									<option value="CN">Chaotic Neutral</option>
-									<option value="LE">Lawful Evil</option>
-									<option value="E">Evil</option>
-									<option value="CE">Chaotic Evil</option>
-								</select>
-							</div>
+							
+						
 							<div class="sheet-half-width" style="vertical-align:top;">
 								<div class="sheet-undertext">Background</div>
 								<input style="width: 100%" type="text" name="attr_background"/>
