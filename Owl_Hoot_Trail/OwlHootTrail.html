@@ -1,6 +1,14 @@
 <p style="text-align: center;"><img src=
-		"http://i.imgur.com/cY3tLcA.jpg" width="900px" style="max-height: 200px;"></p>
-<input type="radio" class="sheet-tab sheet-tab1" name="attr_tab" value="1" checked="checked" /><span class="sheet-tab sheet-tab1">Roleplay</span> <input type="radio" class="sheet-tab sheet-tab2" name="attr_tab" value="2" /><span class="sheet-tab sheet-tab2">Combat</span> <input type="radio" class="sheet-tab sheet-tab3" name="attr_tab" value="3" /><span class="sheet-tab sheet-tab3">Spells</span><input type="radio" name="attr_tab" class="sheet-tab sheet-tab99" value="99" title="Show All"/><span class="sheet-tab sheet-tab99">Show All</span><hr>
+		"https://i.postimg.cc/0jm9PrS6/OHT-B-W-logo.jpg" width="674px" style="max-height: 200px;"></p>
+<input type="radio" class="sheet-tab sheet-tab1" name="attr_tab" value="1" checked="checked" />
+<span class="sheet-tab sheet-tab1">Roleplay</span> 
+<input type="radio" class="sheet-tab sheet-tab2" name="attr_tab" value="2" />
+<span class="sheet-tab sheet-tab2">Combat</span> 
+<input type="radio" class="sheet-tab sheet-tab3" name="attr_tab" value="3" />
+<span class="sheet-tab sheet-tab3">Spells</span>
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab99" value="99" title="Show All"/>
+<span class="sheet-tab sheet-tab99">Show All</span>
+<hr>
 <div class="sheet-section sheet-section-roleplay">
 	<div class="sheet-3colrow">
 		<div class="sheet-col">
@@ -142,14 +150,14 @@
 				<tr>
 					<td><label>Armor Class (AC)</label></td>
 					<td>
-						<input disabled="true" name="attr_armor_class" title="(10 + DEX Bonus + Armor Bonus)" type="number" value="10 + @{dexterity_bonus} + @{armor_bonus} + @{armor_mod} + @{shield_bonus} + @{shield_mod}">
+						<input disabled="true" name="attr_armor_class" title="(10 + DEX Bonus + Armor Bonus)" type="number" value="10 + @{draw_bonus} + @{armor_bonus} + @{armor_mod} + @{shield_bonus} + @{shield_mod}">
 					</td>
 				</tr>
 				<tr>
 					<td><label>Magic Difficulty Class (DC)</label></td>
 					<td>
-						<input disabled="true" name="attr_caster_dc" title="(10 + Level + Mind Bonus)" 
-						type="number" value="@{level}+@{mind_bonus}+10+@{caster_dc_mod}">
+						<input disabled="true" name="attr_caster_dc" title="(10 + Level + Wits Bonus)" 
+						type="number" value="@{level}+@{wits_bonus}+10+@{caster_dc_mod}">
 					</td>
 				</tr>
 				<tr>
@@ -164,8 +172,8 @@
 					<td>
 						<input class="sheet-short" disabled="true" name=
 						"attr_melee_attack_bonus" title=
-						"(Strength Bonus + Level)" type="number" value=
-						"@{strength_bonus} + @{level}">
+						"(Grit Bonus + Level)" type="number" value=
+						"@{grit_bonus} + @{level}">
 					</td>
 				</tr>
 				<tr>
@@ -173,8 +181,8 @@
 					<td>
 						<input class="sheet-short" disabled="true" name=
 						"attr_missile_attack_bonus" title=
-						"(Dexterity Bonus + Level)" type="number" value=
-						"@{dexterity_bonus} + @{level}">
+						"(Draw Bonus + Level)" type="number" value=
+						"@{draw_bonus} + @{level}">
 					</td>
 				</tr>
 			</table>
@@ -196,53 +204,53 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><label>Strength</label></td>
-						<td><input class="sheet-short" name="attr_strength" value="10" type="number"></td>
+						<td><label>Grit</label></td>
+						<td><input class="sheet-short" name="attr_grit" value="10" type="number"></td>
 						<td>
-							<input class="sheet-short" name="attr_strength_modifier" title="(Miscellaneous Strength Modifier)" type="number" value="0">
+							<input class="sheet-short" name="attr_grit_modifier" title="(Miscellaneous Grit Modifier)" type="number" value="0">
 						</td>
 						<td>
-							<input class="sheet-short" name="attr_strength_current" disabled="true" value="@{strength}+@{strength_modifier}" type="number">
+							<input class="sheet-short" name="attr_grit_current" disabled="true" value="@{grit}+@{grit_modifier}" type="number">
 						</td>
 						<td>
-							<input class="sheet-short" disabled="true" name="attr_strength_bonus" title="(Strength / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{strength_current}) - 10) / 2)">
+							<input class="sheet-short" disabled="true" name="attr_grit_bonus" title="(Grit / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{grit_current}) - 10) / 2)">
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Strength Roll}}{{Roll Result=[[d20+[[(@{strength_bonus})]]]]}}" title="d20 + strength bonus">
+							<button type="roll" value="&{template:default} {{name=Grit Roll}}{{Roll Result=[[d20+[[(@{grit_bonus})]]]]}}" title="d20 + grit bonus">
 							</button>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Dexterity</label></td>
-						<td><input class="sheet-short" name="attr_dexterity" value="10" type="number"></td>
+						<td><label>Draw</label></td>
+						<td><input class="sheet-short" name="attr_draw" value="10" type="number"></td>
 						<td>
-							<input class="sheet-short" name="attr_dexterity_modifier" title="(Miscellaneous Dexterity Modifier)" type="number" value="0">
+							<input class="sheet-short" name="attr_draw_modifier" title="(Miscellaneous Draw Modifier)" type="number" value="0">
 						</td>
 						<td>
-							<input class="sheet-short" name="attr_dexterity_current" disabled="true" value="@{dexterity}+@{dexterity_modifier}" type="number">
+							<input class="sheet-short" name="attr_draw_current" disabled="true" value="@{draw}+@{draw_modifier}" type="number">
 						</td>
 						<td>
-							<input class="sheet-short" disabled="true" name="attr_dexterity_bonus" title="(Dexterity / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{dexterity_current}) - 10) / 2)">
+							<input class="sheet-short" disabled="true" name="attr_draw_bonus" title="(Draw / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{draw_current}) - 10) / 2)">
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Dexterity Roll}}{{Roll Result=[[d20+[[(@{dexterity_bonus})]]]]}}" title="d20 + dexterity bonus">
+							<button type="roll" value="&{template:default} {{name=Draw Roll}}{{Roll Result=[[d20+[[(@{draw_bonus})]]]]}}" title="d20 + draw bonus">
 							</button>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Mind</label></td>
-						<td><input class="sheet-short" name="attr_mind" value="10" type="number"></td>
+						<td><label>Wits</label></td>
+						<td><input class="sheet-short" name="attr_wits" value="10" type="number"></td>
 						<td>
-							<input class="sheet-short" name="attr_mind_modifier" title="(Miscellaneous Mind Modifier)" type="number" value="0">
+							<input class="sheet-short" name="attr_wits_modifier" title="(Miscellaneous Wits Modifier)" type="number" value="0">
 						</td>
 						<td>
-							<input class="sheet-short" name="attr_mind_current" disabled="true" value="@{mind}+@{mind_modifier}" type="number">
+							<input class="sheet-short" name="attr_wits_current" disabled="true" value="@{wits}+@{wits_modifier}" type="number">
 						</td>
 						<td>
-							<input class="sheet-short" disabled="true" name="attr_mind_bonus" title="(Mind / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{mind_current}) - 10) / 2)">
+							<input class="sheet-short" disabled="true" name="attr_wits_bonus" title="(Wits / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{wits_current}) - 10) / 2)">
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Mind Roll}}{{Roll Result=[[d20+[[(@{mind_bonus})]]]]}}" title="d20 + mind bonus">
+							<button type="roll" value="&{template:default} {{name=Wits Roll}}{{Roll Result=[[d20+[[(@{wits_bonus})]]]]}}" title="d20 + wits bonus">
 							</button>
 						</td>
 					</tr>
@@ -260,128 +268,128 @@
 					<th><label>Base</label></th>
 					<th title="Miscellaneous Skill Modifier"><label>Mod</label></th>
 					<th><label>Current</label></th>
-					<th><label>Str</label></th>
-					<th><label>Dex</label></th>
-					<th><label>Mnd</label></th>
+					<th><label>Grit</label></th>
+					<th><label>Draw</label></th>
+					<th><label>Wits</label></th>
 				</thead>
 				<tbody>
 					<tr>
-						<td><label>Physical</label></td>
+						<td><label>Toughness</label></td>
 						<td>
-							<input class="sheet-short" name="attr_physical" value="1" type="number">
+							<input class="sheet-short" name="attr_toughness" value="1" type="number">
 						</td>
 						<td>
-							<input type="number" name="attr_physical_mod" class="sheet-short" value="0">
+							<input type="number" name="attr_toughness_mod" class="sheet-short" value="0">
 						</td>
 						<td>
-							<input type="number" disabled="true" name="attr_physical_current" class="sheet-short" value="@{physical}+@{physical_mod}">
+							<input type="number" disabled="true" name="attr_toughness_current" class="sheet-short" value="@{toughness}+@{toughness_mod}">
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Physical+Str}} {{Roll Result=[[d20+[[(@{physical_current})]]+[[(@{strength_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + physical rank + strength bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Toughness+Grit}} {{Roll Result=[[d20+[[(@{toughness_current})]]+[[(@{grit_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + toughness rank + grit bonus + human racial bonus">
 							</button>
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Physical+Dex}} {{Roll Result=[[d20+[[(@{physical_current})]]+[[(@{dexterity_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + physical rank + dexterity bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Toughness+Draw}} {{Roll Result=[[d20+[[(@{toughness_current})]]+[[(@{draw_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + toughness rank + draw bonus + human racial bonus">
 							</button>
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Physical+Mind}} {{Roll Result=[[d20+[[(@{physical_current})]]+[[(@{mind_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + physical rank + mind bonus + human racial bonus">
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td><label>Subterfuge</label></td>
-						<td>
-							<input class="sheet-short" name="attr_subterfuge" value="1" type="number">
-						</td>
-						<td>
-							<input type="number" name="attr_subterfuge_mod" class="sheet-short" value="0">
-						</td>
-						<td>
-							<input type="number" disabled="true" name="attr_subterfuge_current" class="sheet-short" value="@{subterfuge}+@{subterfuge_mod}">
-						</td>
-						<td>
-							<button type="roll" value="&{template:default} {{name=Subterfuge+Str}} {{Roll Result=[[d20+[[(@{subterfuge_current})]]+[[(@{strength_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + subterfuge rank + strength bonus + human racial bonus">
-							</button>
-						</td>
-						<td>
-							<button type="roll" value="&{template:default} {{name=Subterfuge+Dex}} {{Roll Result=[[d20+[[(@{subterfuge_current})]]+[[(@{dexterity_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + subterfuge rank + dexterity bonus + human racial bonus">
-							</button>
-						</td>
-						<td>
-							<button type="roll" value="&{template:default} {{name=Subterfuge+Mind}} {{Roll Result=[[d20+[[(@{subterfuge_current})]]+[[(@{mind_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + subterfuge rank + mind bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Toughness+Wits}} {{Roll Result=[[d20+[[(@{toughness_current})]]+[[(@{wits_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + toughness rank + wits bonus + human racial bonus">
 							</button>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Knowledge</label></td>
+						<td><label>Wile</label></td>
 						<td>
-							<input class="sheet-short" name="attr_knowledge" value="1" type="number">
+							<input class="sheet-short" name="attr_wile" value="1" type="number">
 						</td>
 						<td>
-							<input type="number" name="attr_knowledge_mod" class="sheet-short" value="0">
+							<input type="number" name="attr_wile_mod" class="sheet-short" value="0">
 						</td>
 						<td>
-							<input type="number" disabled="true" name="attr_knowledge_current" class="sheet-short" value="@{knowledge}+@{knowledge_mod}">
+							<input type="number" disabled="true" name="attr_wile_current" class="sheet-short" value="@{wile}+@{wile_mod}">
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Knowledge+Str}} {{Roll Result=[[d20+[[(@{knowledge_current})]]+[[(@{strength_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + knowledge rank + strength bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Wile+Grit}} {{Roll Result=[[d20+[[(@{wile_current})]]+[[(@{grit_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + wile rank + grit bonus + human racial bonus">
 							</button>
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Knowledge+Dex}} {{Roll Result=[[d20+[[(@{knowledge_current})]]+[[(@{dexterity_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + knowledge rank + dexterity bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Wile+Draw}} {{Roll Result=[[d20+[[(@{wile_current})]]+[[(@{draw_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + wile rank + draw bonus + human racial bonus">
 							</button>
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Knowledge+Mind}} {{Roll Result=[[d20+[[(@{knowledge_current})]]+[[(@{mind_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + knowledge rank + mind bonus + human racial bonus">
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td><label>Communication</label></td>
-						<td>
-							<input class="sheet-short" name="attr_communication" value="1" type="number">
-						</td>
-						<td>
-							<input type="number" name="attr_communication_mod" class="sheet-short" value="0">
-						</td>
-						<td>
-							<input type="number" disabled="true" name="attr_communication_current" class="sheet-short" value="@{communication}+@{communication_mod}">
-						</td>
-						<td>
-							<button type="roll" value="&{template:default} {{name=Communication+Str}} {{Roll Result=[[d20+[[(@{communication_current})]]+[[(@{strength_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + communication rank + strength bonus + human racial bonus">
-							</button>
-						</td>
-						<td>
-							<button type="roll" value="&{template:default} {{name=Communication+Dex}} {{Roll Result=[[d20+[[(@{communication_current})]]+[[(@{dexterity_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + communication rank + dexterity bonus + human racial bonus">
-							</button>
-						</td>
-						<td>
-							<button type="roll" value="&{template:default} {{name=Communication+Mind}} {{Roll Result=[[d20+[[(@{communication_current})]]+[[(@{mind_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + communication rank + mind bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Wile+Wits}} {{Roll Result=[[d20+[[(@{wile_current})]]+[[(@{wits_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + wile rank + wits bonus + human racial bonus">
 							</button>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Survival</label></td>
+						<td><label>Learning</label></td>
 						<td>
-							<input class="sheet-short" name="attr_survival" value="0" type="number">
+							<input class="sheet-short" name="attr_learning" value="1" type="number">
 						</td>
 						<td>
-							<input type="number" name="attr_survival_mod" class="sheet-short" value="0">
+							<input type="number" name="attr_learning_mod" class="sheet-short" value="0">
 						</td>
 						<td>
-							<input type="number" disabled="true" name="attr_survival_current" class="sheet-short" value="@{survival}+@{survival_mod}">
+							<input type="number" disabled="true" name="attr_learning_current" class="sheet-short" value="@{learning}+@{learning_mod}">
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Survival+Str}} {{Roll Result=[[d20+[[(@{survival_current})]]+[[(@{strength_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + survival rank + strength bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Learning+Grit}} {{Roll Result=[[d20+[[(@{learning_current})]]+[[(@{grit_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + learning rank + grit bonus + human racial bonus">
 							</button>
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Survival+Dex}} {{Roll Result=[[d20+[[(@{survival_current})]]+[[(@{dexterity_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + survival rank + dexterity bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Learning+Draw}} {{Roll Result=[[d20+[[(@{learning_current})]]+[[(@{draw_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + learning rank + draw bonus + human racial bonus">
 							</button>
 						</td>
 						<td>
-							<button type="roll" value="&{template:default} {{name=Survival+Mind}} {{Roll Result=[[d20+[[(@{survival_current})]]+[[(@{mind_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + survival rank + mind bonus + human racial bonus">
+							<button type="roll" value="&{template:default} {{name=Learning+Wits}} {{Roll Result=[[d20+[[(@{learning_current})]]+[[(@{wits_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + learning rank + wits bonus + human racial bonus">
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td><label>Amity</label></td>
+						<td>
+							<input class="sheet-short" name="attr_amity" value="1" type="number">
+						</td>
+						<td>
+							<input type="number" name="attr_amity_mod" class="sheet-short" value="0">
+						</td>
+						<td>
+							<input type="number" disabled="true" name="attr_amity_current" class="sheet-short" value="@{amity}+@{amity_mod}">
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Amity+Grit}} {{Roll Result=[[d20+[[(@{amity_current})]]+[[(@{grit_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + amity rank + grit bonus + human racial bonus">
+							</button>
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Amity+Draw}} {{Roll Result=[[d20+[[(@{amity_current})]]+[[(@{draw_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + amity rank + draw bonus + human racial bonus">
+							</button>
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Amity+Wits}} {{Roll Result=[[d20+[[(@{amity_current})]]+[[(@{wits_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + amity rank + wits bonus + human racial bonus">
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td><label>Wilderness</label></td>
+						<td>
+							<input class="sheet-short" name="attr_wilderness" value="0" type="number">
+						</td>
+						<td>
+							<input type="number" name="attr_wilderness_mod" class="sheet-short" value="0">
+						</td>
+						<td>
+							<input type="number" disabled="true" name="attr_wilderness_current" class="sheet-short" value="@{wilderness}+@{wilderness_mod}">
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Wilderness+Grit}} {{Roll Result=[[d20+[[(@{wilderness_current})]]+[[(@{grit_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + wilderness rank + grit bonus + human racial bonus">
+							</button>
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Wilderness+Draw}} {{Roll Result=[[d20+[[(@{wilderness_current})]]+[[(@{draw_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + wilderness rank + draw bonus + human racial bonus">
+							</button>
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Wilderness+Wits}} {{Roll Result=[[d20+[[(@{wilderness_current})]]+[[(@{wits_bonus})]]+[[(floor(@{race}))]]]]}}" title="d20 + wilderness rank + wits bonus + human racial bonus">
 							</button>
 						</td>
 					</tr>
@@ -500,7 +508,7 @@
 				<tr>
 					<td><label title="Select your token before clicking to get added to the Turn Table">Initiative Roll</label></td>
 					<td>
-						<button type="roll" value="&{template:default} {{name=Initiative Roll}} {{Roll Result=[[d20+[[(@{dexterity_bonus})]] &{tracker}]]}}" title="d20 + Dexterity Bonus"></button>
+						<button type="roll" value="&{template:default} {{name=Initiative Roll}} {{Roll Result=[[d20+[[(@{draw_bonus})]] &{tracker}]]}}" title="d20 + Draw Bonus"></button>
 					</td>
 				</tr>
 			</table>
@@ -520,15 +528,15 @@
 				<tbody>
 					<tr>
 						<td><button type="roll" value=
-						"&{template:default} {{name=Fortitude Save }} {{Roll Result=[[d20+[[(@{physical_current})]]+[[(@{strength_bonus})]]+[[(floor(@{race}))]]+[[((floor(abs((-2+@{class}))/16))*(1+floor(@{level}/5)))]]]]}}" title="d20 + physical rank + strength bonus + human racial bonus + paladin bonus">
+						"&{template:default} {{name=Fortitude Save }} {{Roll Result=[[d20+[[(@{toughness_current})]]+[[(@{grit_bonus})]]+[[(floor(@{race}))]]+[[((floor(abs((-2+@{class}))/16))*(1+floor(@{level}/5)))]]]]}}" title="d20 + toughness rank + grit bonus + human racial bonus + paladin bonus">
 						</button></td>
 
 						<td><button type="roll" value=
-						"&{template:default} {{name=Reflex Save}} {{Roll Result=[[d20+[[(@{physical_current})]]+[[(@{dexterity_bonus})]]+[[(floor(@{race}))]]+[[((floor(abs((-2+@{class}))/16))*(1+floor(@{level}/5)))]]]]}}" title="d20 + physical rank + dexterity bonus + human racial bonus + paladin bonus">
+						"&{template:default} {{name=Reflex Save}} {{Roll Result=[[d20+[[(@{toughness_current})]]+[[(@{draw_bonus})]]+[[(floor(@{race}))]]+[[((floor(abs((-2+@{class}))/16))*(1+floor(@{level}/5)))]]]]}}" title="d20 + toughness rank + draw bonus + human racial bonus + paladin bonus">
 						</button></td>
 
 						<td><button type="roll" value=
-						"&{template:default} {{name=Will Save}} {{Roll Result=[[d20+[[(@{mind_bonus})]]+[[(@{level})]]+[[(floor(@{race}))]]+[[((floor(abs((-2+@{class}))/16))*(1+floor(@{level}/5)))]]]]}}" title="d20 + mind bonus + level + human racial bonus + paladin bonus">
+						"&{template:default} {{name=Will Save}} {{Roll Result=[[d20+[[(@{wits_bonus})]]+[[(@{level})]]+[[(floor(@{race}))]]+[[((floor(abs((-2+@{class}))/16))*(1+floor(@{level}/5)))]]]]}}" title="d20 + wits bonus + level + human racial bonus + paladin bonus">
 						</button></td>
 					</tr>
 				</tbody>
@@ -606,7 +614,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Light Weapon/Dex</label></td>
+						<td><label>Light Weapon/Draw</label></td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Light Weapon Roll}} {{Roll Result=[[d20+[[(@{missile_attack_bonus})]]+[[((floor(abs(@{class})/16))*(1+floor(@{level}/5)))]]+[[(@{weapon_mod})]]]]}}" title="d20 + light weapon attack bonus + fighter class bonus + miscellaneous weapon modifier">
 						</button>
@@ -634,7 +642,7 @@
 								<input type="number" name="attr_damage_mod" value="0">
 							</td>
 							<td>
-								<button class="sheet-button" type="roll" value="&{template:default} {{name=Damage Roll}}{{@{weapon_name}=[[@{damage_dice}+[[((floor(abs(@{class})/16))*(1+floor(@{level}/5)))]]+[[((floor(abs((@{range_type}))/2))*(@{strength_bonus}))]]+[[((abs(@{class}%2))*(abs((@{range_type})%2)))]]+[[(@{damage_mod})]]]]}}" title="damage dice + fighter class bonus + melee bonus + ranger class bonus + miscellaneous damage modifier"></button>
+								<button class="sheet-button" type="roll" value="&{template:default} {{name=Damage Roll}}{{@{weapon_name}=[[@{damage_dice}+[[((floor(abs(@{class})/16))*(1+floor(@{level}/5)))]]+[[((floor(abs((@{range_type}))/2))*(@{grit_bonus}))]]+[[((abs(@{class}%2))*(abs((@{range_type})%2)))]]+[[(@{damage_mod})]]]]}}" title="damage dice + fighter class bonus + melee bonus + ranger class bonus + miscellaneous damage modifier"></button>
 							</td>
 					</tbody>
 				</table>
@@ -656,8 +664,8 @@
 						<td>
 							<input class="sheet-short" disabled="true" name=
 								"attr_magic_attack_bonus" title=
-								"(Mind Bonus + Level)" type="number" value=
-								"@{mind_bonus} + @{level}">
+								"(Wits Bonus + Level)" type="number" value=
+								"@{wits_bonus} + @{level}">
 						</td>
 					</tr>
 					<tr>
