@@ -4,7 +4,7 @@
 .charsheet label {
 display: inline-block;
 font-family: 'Old Standard TT';
-color: black;
+color:#000000;
 }
 .charsheet input {
 display: inline-block;
@@ -34,12 +34,12 @@ vertical-align: top;
 }
 /*addresses the majority of the label text in the character sheet*/
 .sheet-table td, .sheet-table th{
-	font-size: 1.2em;
+	/*font-size: 1.2em;
 	font-weight: bold;
 	font-family: 'Arial';
 	text-align: center;
 	padding: 5px;
-	
+	color: black;*/
 }
 
 input[type="number"] {

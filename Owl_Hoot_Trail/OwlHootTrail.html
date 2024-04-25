@@ -14,37 +14,37 @@
 		<div class="sheet-col">
 			<table style="width: 100%;">
 				<tr>
-					<td><label>Name</label></td>
+					<td><label style="color: black">Name</label></td>
 					<td>
 						<input name="attr_character_name" value="Name" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Hair Color</label></td>
+					<td><label style="color: black">Hair Color</label></td>
 					<td>
 						<input name="attr_hair_color" value="Hair Color" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Eye Color</label></td>
+					<td><label style="color: black">Eye Color</label></td>
 					<td>
 						<input name="attr_eye_color" value="Eye Color" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Height</label></td>
+					<td><label style="color: black">Height</label></td>
 					<td>
 						<input name="attr_height" value="6"	type="text" class="sheet-short">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Weight:</label></td>
+					<td><label style="color: black">Weight:</label></td>
 					<td>
 						<input name="attr_weight" value="55" type="text" class="sheet-short">
 					<td>
 				</tr>
 				<tr>
-					<td><label>Gender</label></td>
+					<td><label style="color: black">Gender</label></td>
 					<td>
 						<input name="attr_gender" value="" type="text" style="width: 95px">
 					</td>
@@ -56,7 +56,7 @@
 			
 			<table style="width:100%">
 				<tr>
-					<td><label>Race</label></td>
+					<td><label style="color: black">Race</label></td>
 					<td>
 						<select name="attr_race" style="width: 100px">
 							<option value="1">
@@ -87,7 +87,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label>Class</label></td>
+					<td><label style="color: black">Class</label></td>
 					<td>
 						<select name="attr_class" style="width: 100px">
 							<option value="16">
@@ -124,13 +124,13 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label>Level</label></td>
+					<td><label style="color: black">Level</label></td>
 					<td>
 						<input name="attr_level" value="1" type="number">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Encounter Levels</label></td>
+					<td><label style="color: black">Encounter Levels</label></td>
 					<td>
 						<input name="attr_encounter_levels"	value="0" type="number">
 					</td>
@@ -142,33 +142,33 @@
 			<table style="width: 100%;">
 				
 				<tr>
-					<td><label>Hit Points (HP)</label></td>
+					<td><label style="color: black">Hit Points (HP)</label></td>
 					<td nowrap>
 						<input name="attr_hit_points" value="14" title="(STR + 1d6/level)" type="number">\<input name="attr_hit_points_max" value="14" title="(STR + 1d6/level)" type="number" />
 					</td>
 				</tr>
 				<tr>
-					<td><label>Armor Class (AC)</label></td>
+					<td><label style="color: black">Armor Class (AC)</label></td>
 					<td>
 						<input disabled="true" name="attr_armor_class" title="(10 + DEX Bonus + Armor Bonus)" type="number" value="10 + @{draw_bonus} + @{armor_bonus} + @{armor_mod} + @{shield_bonus} + @{shield_mod}">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Magic Difficulty Class (DC)</label></td>
+					<td><label style="color: black">Magic Difficulty Class (DC)</label></td>
 					<td>
 						<input disabled="true" name="attr_caster_dc" title="(10 + Level + Wits Bonus)" 
 						type="number" value="@{level}+@{wits_bonus}+10+@{caster_dc_mod}">
 					</td>
 				</tr>
 				<tr>
-					<td><label title="Any Miscellaneous Modifiers to the caster's DC">Caster DC Mod</label></td>
+					<td><label style="color: black"title="Any Miscellaneous Modifiers to the caster's DC">Caster DC Mod</label></td>
 					<td>
 						<input  name="attr_caster_dc_mod"
 						type="number" value="0">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Melee Attack Bonus</label></td>
+					<td><label style="color: black">Melee Attack Bonus</label></td>
 					<td>
 						<input class="sheet-short" disabled="true" name=
 						"attr_melee_attack_bonus" title=
@@ -177,7 +177,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label>Missile/Ranged Attack Bonus</label></td>
+					<td><label style="color: black">Missile/Ranged Attack Bonus</label></td>
 					<td>
 						<input class="sheet-short" disabled="true" name=
 						"attr_missile_attack_bonus" title=
@@ -195,16 +195,16 @@
 		<div class="sheet-col">
 			<table class="sheet-table">
 				<thead>
-						<th><label>Stat</label></th>
-						<th><label>Base</label></th>
-						<th title="Miscellaneous Stat Modifier"><label>Mod</label></th>
-						<th><label>Current</label></th>
-						<th><label>Bonus</label></th>
-						<th><label>Roll</label></th>
+						<th><label style="color: black">Stat</label></th>
+						<th><label style="color: black">Base</label></th>
+						<th title="Miscellaneous Stat Modifier"><label style="color: black">Mod</label></th>
+						<th><label style="color: black">Current</label></th>
+						<th><label style="color: black">Bonus</label></th>
+						<th><label style="color: black">Roll</label></th>
 				</thead>
 				<tbody>
 					<tr>
-						<td><label>Grit</label></td>
+						<td><label style="color: black">Grit</label></td>
 						<td><input class="sheet-short" name="attr_grit" value="10" type="number"></td>
 						<td>
 							<input class="sheet-short" name="attr_grit_modifier" title="(Miscellaneous Grit Modifier)" type="number" value="0">
@@ -221,7 +221,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Draw</label></td>
+						<td><label style="color: black">Draw</label></td>
 						<td><input class="sheet-short" name="attr_draw" value="10" type="number"></td>
 						<td>
 							<input class="sheet-short" name="attr_draw_modifier" title="(Miscellaneous Draw Modifier)" type="number" value="0">
@@ -238,7 +238,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Wits</label></td>
+						<td><label style="color: black">Wits</label></td>
 						<td><input class="sheet-short" name="attr_wits" value="10" type="number"></td>
 						<td>
 							<input class="sheet-short" name="attr_wits_modifier" title="(Miscellaneous Wits Modifier)" type="number" value="0">
@@ -264,17 +264,17 @@
 		<div class="sheet-col">
 			<table class="sheet-table">
 				<thead>
-					<th><label>Skill</label></th>
-					<th><label>Base</label></th>
-					<th title="Miscellaneous Skill Modifier"><label>Mod</label></th>
-					<th><label>Current</label></th>
-					<th><label>Grit</label></th>
-					<th><label>Draw</label></th>
-					<th><label>Wits</label></th>
+					<th><label style="color: black">Skill</label></th>
+					<th><label style="color: black">Base</label></th>
+					<th title="Miscellaneous Skill Modifier"><label style="color: black">Mod</label></th>
+					<th><label style="color: black">Current</label></th>
+					<th><label style="color: black">Grit</label></th>
+					<th><label style="color: black">Draw</label></th>
+					<th><label style="color: black">Wits</label></th>
 				</thead>
 				<tbody>
 					<tr>
-						<td><label>Toughness</label></td>
+						<td><label style="color: black">Toughness</label></td>
 						<td>
 							<input class="sheet-short" name="attr_toughness" value="1" type="number">
 						</td>
@@ -298,7 +298,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Wile</label></td>
+						<td><label style="color: black">Wile</label></td>
 						<td>
 							<input class="sheet-short" name="attr_wile" value="1" type="number">
 						</td>
@@ -322,7 +322,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Learning</label></td>
+						<td><label style="color: black">Learning</label></td>
 						<td>
 							<input class="sheet-short" name="attr_learning" value="1" type="number">
 						</td>
@@ -346,7 +346,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Amity</label></td>
+						<td><label style="color: black">Amity</label></td>
 						<td>
 							<input class="sheet-short" name="attr_amity" value="1" type="number">
 						</td>
@@ -370,7 +370,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Wilderness</label></td>
+						<td><label style="color: black">Wilderness</label></td>
 						<td>
 							<input class="sheet-short" name="attr_wilderness" value="0" type="number">
 						</td>
@@ -458,19 +458,19 @@
 			<h3 style="text-align: center;">Armor</h3>
 			<table class="sheet-table">
 				<tr>
-					<td><label>Name</label></td>
+					<td><label style="color: black">Name</label></td>
 					<td>
 						<input name="attr_armor_name" value="Armor Name" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Bonus</label></td>
+					<td><label style="color: black">Bonus</label></td>
 					<td>
 						<input name="attr_armor_bonus" value="0" type="number">
 					</td>
 				</tr>
 				<tr>
-					<td><label title="Miscellaneous Modifier">Misc Mod</label></td>
+					<td><label style="color: black"title="Miscellaneous Modifier">Misc Mod</label></td>
 					<td>
 						<input name="attr_armor_mod" value="0" type="number">
 					</td>
@@ -484,19 +484,19 @@
 			<h3 style="text-align: center;">Shield</h3>
 			<table class="sheet-table">
 				<tr>
-					<td><label>Name</label></td>
+					<td><label style="color: black">Name</label></td>
 					<td>
 						<input name="attr_shield_name" value="Shield Name" type="text">
 					</td>
 				</tr>
 				<tr>
-					<td><label>Bonus</label></td>
+					<td><label style="color: black">Bonus</label></td>
 					<td>
 						<input name="attr_shield_bonus" value="0" type="number">
 					</td>
 				</tr>
 				<tr>
-					<td><label title="Miscellanous Modifier">Misc Mod</label></td>
+					<td><label style="color: black"title="Miscellanous Modifier">Misc Mod</label></td>
 					<td>
 						<input name="attr_shield_mod" value="0" type="number">
 					</td>
@@ -506,7 +506,7 @@
 		<div class="sheet-col">
 			<table class="sheet-table">
 				<tr>
-					<td><label title="Select your token before clicking to get added to the Turn Table">Initiative Roll</label></td>
+					<td><label style="color: black"title="Select your token before clicking to get added to the Turn Table">Initiative Roll</label></td>
 					<td>
 						<button type="roll" value="&{template:default} {{name=Initiative Roll}} {{Roll Result=[[d20+[[(@{draw_bonus})]] &{tracker}]]}}" title="d20 + Draw Bonus"></button>
 					</td>
@@ -551,14 +551,14 @@
 				<h3 style="text-align: center">Weapon Definition</h3>
 				<table style="width: 100%">
 					<tr>
-						<td><label>Name</label></td>
+						<td><label style="color: black">Name</label></td>
 						<td>
 							<input name="attr_weapon_name" value="Weapon Name" 
 							style="width:100px" type="text">
 						</td>
 					</tr>
 					<tr>
-						<td><label>Damage Dice</label></td>
+						<td><label style="color: black">Damage Dice</label></td>
 						<td>
 							<input type="text" class="sheet-short" name="attr_damage_dice" value="" title="e.g. 1d6, 2d8, etc.">
 						</td>
@@ -570,7 +570,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Weapon Type</label></td>
+						<td><label style="color: black">Weapon Type</label></td>
 						<td>
 							<select name="attr_range_type" style="width: 130px">
 								<option value="2">
@@ -601,20 +601,20 @@
 				<table class="sheet-table">
 					<tr>
 						<td>
-							<label>Melee</label>
+							<label style="color: black">Melee</label>
 						</td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Melee Attack Roll}} {{Roll Result=[[d20+[[(@{melee_attack_bonus})]]+[[((floor(abs(@{class})/16))*(1+floor(@{level}/5)))]]+[[(@{weapon_mod})]]]]}}" title="d20 + melee attack bonus + fighter class bonus + miscellaneous weapon modifier"></button>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Missile/Ranged</label></td>
+						<td><label style="color: black">Missile/Ranged</label></td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Missile/Ranged Roll}}{{Roll Result=[[d20+[[(@{missile_attack_bonus})]] + [[((floor(abs(@{class})/16))*(1+floor(@{level}/5)))+((abs(@{class}%2)))]]+[[(@{weapon_mod})]]]]}}" title="d20+missile/ranged attack bonus + fighter class bonus + ranger class bonus + miscellaneous weapon modifier"></button>
 						</td>
 					</tr>
 					<tr>
-						<td><label>Light Weapon/Draw</label></td>
+						<td><label style="color: black">Light Weapon/Draw</label></td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Light Weapon Roll}} {{Roll Result=[[d20+[[(@{missile_attack_bonus})]]+[[((floor(abs(@{class})/16))*(1+floor(@{level}/5)))]]+[[(@{weapon_mod})]]]]}}" title="d20 + light weapon attack bonus + fighter class bonus + miscellaneous weapon modifier">
 						</button>
@@ -634,7 +634,7 @@
 				<table class="sheet-table">
 					<thead>
 						<th><label title="Miscellaneous Damage Modifier">Mod</label></th>
-						<th><label>Roll</label></th>
+						<th><label style="color: black">Roll</label></th>
 					</thead>
 					<tbody>
 						<tr>
@@ -657,10 +657,10 @@
 	<h1 style="text-align: center;">Spells</h1>
 		<div class="sheet-3colrow">
 			<div class="sheet-col">
-				<label>Spell Interface</label>
+				<label style="color: black">Spell Interface</label>
 				<table class="sheet-table">
 					<tr>
-						<td><label>Magic Attack Bonus</label></td>
+						<td><label style="color: black">Magic Attack Bonus</label></td>
 						<td>
 							<input class="sheet-short" disabled="true" name=
 								"attr_magic_attack_bonus" title=
@@ -669,11 +669,11 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label title="Spell Difficulty Class Miscellaneous Modifier">Spell DC Mod</label></td>
+						<td><label style="color: black"title="Spell Difficulty Class Miscellaneous Modifier">Spell DC Mod</label></td>
 						<td><input type="number" class="sheet-short" name="attr_spell_mod" title="increase or decrease spell difficulty class" value="0"></td>
 					</tr>
 					<tr>
-						<td><label>Spell Roll</label></td>
+						<td><label style="color: black">Spell Roll</label></td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Casting Roll}} {{Spell Level ?{Spell level}=[[d20+[[(@{magic_attack_bonus})]]]]}} {{Caster DC=[[[[(@{caster_dc})]]]]}} {{HP Cost=[[[[(?{Spell level})+(?{Spell level})+1]]]]}}" title="d20 + Magic Attack Bonus"></button>
 						</td>
@@ -682,7 +682,7 @@
 				<hr>
 				
 				
-				<label>Spell Table</label>
+				<label style="color: black">Spell Table</label>
 				<table class="spellsTable">
 					<thead>
 						<th>Spell Level</th>
@@ -744,7 +744,7 @@
 				</table>
 			</div>
 			<div class="sheet-col">
-				<label>Spellbook</label>
+				<label style="color: black">Spellbook</label>
 				<textarea name="attr_spellbook" style="height: 400px; width: 500px;"></textarea>
 			</div>
 			
