@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Sancreek&display=swap');
-@import url('https://fonts.googleapis.com/css?family=family=Old+Standard+TT&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Sancreek|IM+Fell+Great+Primer+SC|Old+Standard+TT&display=swap');
 
 .charsheet label {
 display: inline-block;
-font-family: 'Sancreek';
+font-family: 'IM Fell Great Primer SC';
 }
 .charsheet input {
 display: inline-block;
-width: 165px;
+width: 100px;
 font-family: 'Old Standard TT';
 }
 .sheet-col strong.sheet-dee {
 font-size: 1.4em;
 font-weight: bold;
-padding-right: 4px;
+padding-right: 0px;
 }
 .charsheet input.sheet-short {
-width: 3.5em;
+width: 1.5em;
 }
 
 /*
@@ -34,11 +34,11 @@ vertical-align: top;
 }
 /*addresses the majority of the label text in the character sheet*/
 .sheet-table td, .sheet-table th{
-	font-size: 1.2em;
+	font-size: 1.0em;
 	font-weight: bold;
-	font-family: 'Sancreek';
+	font-family: 'IM Fell Great Primer SC';
 	text-align: center;
-	padding: 5px;
+	padding: 0px;
 }
 
 input[type="number"] {

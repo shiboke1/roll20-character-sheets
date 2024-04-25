@@ -1,3 +1,6 @@
+
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+
 <p style="text-align: center;"><img src=
 		"https://i.postimg.cc/0jm9PrS6/OHT-B-W-logo.jpg" width="674px" style="max-height: 200px;"></p>
 <input type="radio" class="sheet-tab sheet-tab1" name="attr_tab" value="1" checked="checked" />
@@ -14,14 +17,14 @@
 		<div class="sheet-col">
 			<table style="width: 100%;">
 				<tr>
-					<td><label style="color: black">NAME</label></td>
+					<td><label style="color: black">Name</label></td>
 					<td>
 						<input name="attr_character_name" value="Name" type="text">
 					</td>
 				</tr>
 		
 				<tr>
-					<td><label style="color: black">ORIGIN</label></td>
+					<td><label style="color: black">Origin</label></td>
 					<td>
 						<select name="attr_origin" style="width: 100px">
 							<option value="1">
@@ -35,7 +38,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label style="color: black">RACE</label></td>
+					<td><label style="color: black">Race</label></td>
 					<td>
 						<select name="attr_race" style="width: 100px">
 							<option value="1">
@@ -74,7 +77,7 @@
 			<table style="width:100%">
 
 				<tr>
-					<td><label style="color: black">CLASS</label></td>
+					<td><label style="color: black">Class</label></td>
 					<td>
 						<select name="attr_class" style="width: 100px">
 							<option value="16">
@@ -111,7 +114,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><label style="color: black">LEVEL</label></td>
+					<td><label style="color: black">Level</label></td>
 					<td>
 						<input name="attr_level" value="1" type="number">
 					</td>
@@ -130,29 +133,33 @@
 	<hr>
 
 	<div class="sheet-2colrow">
-		<h1 style="text-align: center; font-family: 'Sancreek';">Stats/Attributes</h1>
+		
 		<div class="sheet-col">
+			<h1 style="text-align: center; font-family: 'Sancreek';">ABILITY SCORES</h1>
 			<table class="sheet-table">
 				<thead>
-						<th><label style="color: black">Stat</label></th>
+						<th><label style="color: black"></label></th>
+						<th><label style="color: black">Total</label></th>
 						<th><label style="color: black">Base</label></th>
-						<th title="Miscellaneous Stat Modifier"><label style="color: black">Mod</label></th>
-						<th><label style="color: black">Current</label></th>
-						<th><label style="color: black">Bonus</label></th>
-						<th><label style="color: black">Roll</label></th>
+						<th><label style="color: black">Race</label></th>
+						<th><label style="color: black">Class</label></th>
+						<th title="Miscellaneous Stat Modifier"><label style="color: black; font-family: 'IM Fell Great Primer SC'">Temp</label></th>
 				</thead>
 				<tbody>
 					<tr>
 						<td><label style="color: black">Grit</label></td>
-						<td><input class="sheet-short" name="attr_grit" value="10" type="number"></td>
+						<td><input class="sheet-short" name="attr_grit_total" value="0" type="number"></td>
 						<td>
-							<input class="sheet-short" name="attr_grit_modifier" title="(Miscellaneous Grit Modifier)" type="number" value="0">
+							<input class="sheet-short" name="attr_grit_base" type="number" value="0">
 						</td>
 						<td>
-							<input class="sheet-short" name="attr_grit_current" disabled="true" value="@{grit}+@{grit_modifier}" type="number">
+							<input class="sheet-short" name="attr_grit_race" disabled="true" value="@{grit}+@{grit_modifier}" type="number">
 						</td>
 						<td>
-							<input class="sheet-short" disabled="true" name="attr_grit_bonus" title="(Grit / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{grit_current}) - 10) / 2)">
+							<input class="sheet-short" name="attr_grit_class">
+						</td>
+						<td>
+							<input class="sheet-short" name="attr_grit_temp" type="number" value="0">
 						</td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Grit Roll}}{{Roll Result=[[d20+[[(@{grit_bonus})]]]]}}" title="d20 + grit bonus">
@@ -161,15 +168,18 @@
 					</tr>
 					<tr>
 						<td><label style="color: black">Draw</label></td>
-						<td><input class="sheet-short" name="attr_draw" value="10" type="number"></td>
+						<td><input class="sheet-short" name="attr_draw_total" value="0" type="number"></td>
 						<td>
-							<input class="sheet-short" name="attr_draw_modifier" title="(Miscellaneous Draw Modifier)" type="number" value="0">
+							<input class="sheet-short" name="attr_draw_base" type="number" value="0">
 						</td>
 						<td>
-							<input class="sheet-short" name="attr_draw_current" disabled="true" value="@{draw}+@{draw_modifier}" type="number">
+							<input class="sheet-short" name="attr_draw_race" disabled="true" value="@{draw}+@{draw_modifier}" type="number">
 						</td>
 						<td>
-							<input class="sheet-short" disabled="true" name="attr_draw_bonus" title="(Draw / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{draw_current}) - 10) / 2)">
+							<input class="sheet-short" name="attr_draw_class">
+						</td>
+						<td>
+							<input class="sheet-short" name="attr_draw_temp" type="number" value="0">
 						</td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Draw Roll}}{{Roll Result=[[d20+[[(@{draw_bonus})]]]]}}" title="d20 + draw bonus">
@@ -178,15 +188,18 @@
 					</tr>
 					<tr>
 						<td><label style="color: black">Wits</label></td>
-						<td><input class="sheet-short" name="attr_wits" value="10" type="number"></td>
+						<td><input class="sheet-short" name="attr_wits_total" value="0" type="number"></td>
 						<td>
-							<input class="sheet-short" name="attr_wits_modifier" title="(Miscellaneous Wits Modifier)" type="number" value="0">
+							<input class="sheet-short" name="attr_wits_base" type="number" value="0">
 						</td>
 						<td>
-							<input class="sheet-short" name="attr_wits_current" disabled="true" value="@{wits}+@{wits_modifier}" type="number">
+							<input class="sheet-short" name="attr_wits_race" disabled="true" value="@{wits}+@{wits_modifier}" type="number">
 						</td>
 						<td>
-							<input class="sheet-short" disabled="true" name="attr_wits_bonus" title="(Wits / 2 - Rounded down + Misc Modifier)" type="number" value="floor(((@{wits_current}) - 10) / 2)">
+							<input class="sheet-short" name="attr_wits_class">
+						</td>
+						<td>
+							<input class="sheet-short" name="attr_wits_temp" type="number" value="0">
 						</td>
 						<td>
 							<button type="roll" value="&{template:default} {{name=Wits Roll}}{{Roll Result=[[d20+[[(@{wits_bonus})]]]]}}" title="d20 + wits bonus">
@@ -197,14 +210,15 @@
 			</table>
 		</div>
 
-		<h1 style="text-align: center; font-family: 'Sancreek';">Skills</h1>
+		
 		<div class="sheet-col">
+			<h1 style="text-align: center; font-family: 'Sancreek';">SKILLS</h1>
 			<table class="sheet-table">
 				<thead>
-					<th><label style="color: black">Skill</label></th>
-					<th><label style="color: black">Base</label></th>
-					<th title="Miscellaneous Skill Modifier"><label style="color: black">Mod</label></th>
-					<th><label style="color: black">Current</label></th>
+					<th><label style="color: black"></label></th>
+					<th><label style="color: black">Total</label></th>
+					<th><label style="color: black">Race</label></th>
+					<th><label style="color: black">Class</label></th>
 					<th><label style="color: black">Grit</label></th>
 					<th><label style="color: black">Draw</label></th>
 					<th><label style="color: black">Wits</label></th>
@@ -213,7 +227,7 @@
 					<tr>
 						<td><label style="color: black">Toughness</label></td>
 						<td>
-							<input class="sheet-short" name="attr_toughness" value="1" type="number">
+							<input class="sheet-short" name="attr_toughness_total" value="1" type="number">
 						</td>
 						<td>
 							<input type="number" name="attr_toughness_mod" class="sheet-short" value="0">
