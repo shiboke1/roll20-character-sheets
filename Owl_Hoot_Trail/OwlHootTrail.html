@@ -14,49 +14,28 @@
 		<div class="sheet-col">
 			<table style="width: 100%;">
 				<tr>
-					<td><label style="color: black">Name</label></td>
+					<td><label style="color: black">NAME</label></td>
 					<td>
 						<input name="attr_character_name" value="Name" type="text">
 					</td>
 				</tr>
+		
 				<tr>
-					<td><label style="color: black">Hair Color</label></td>
+					<td><label style="color: black">ORIGIN</label></td>
 					<td>
-						<input name="attr_hair_color" value="Hair Color" type="text">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Eye Color</label></td>
-					<td>
-						<input name="attr_eye_color" value="Eye Color" type="text">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Height</label></td>
-					<td>
-						<input name="attr_height" value="6"	type="text" class="sheet-short">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Weight:</label></td>
-					<td>
-						<input name="attr_weight" value="55" type="text" class="sheet-short">
-					<td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Gender</label></td>
-					<td>
-						<input name="attr_gender" value="" type="text" style="width: 95px">
-					</td>
-				</tr>
-			</table>
-		</div>
+						<select name="attr_origin" style="width: 100px">
+							<option value="1">
+								Greenhorn
+							</option>
+							<option value="0.7">
+								Native
+							</option>
 
-		<div class="sheet-col">
-			
-			<table style="width:100%">
+						</select>
+					</td>
+				</tr>
 				<tr>
-					<td><label style="color: black">Race</label></td>
+					<td><label style="color: black">RACE</label></td>
 					<td>
 						<select name="attr_race" style="width: 100px">
 							<option value="1">
@@ -86,111 +65,71 @@
 						</select>
 					</td>
 				</tr>
+
+			</table>
+		</div>
+
+		<div class="sheet-col">
+			
+			<table style="width:100%">
+
 				<tr>
-					<td><label style="color: black">Class</label></td>
+					<td><label style="color: black">CLASS</label></td>
 					<td>
 						<select name="attr_class" style="width: 100px">
 							<option value="16">
-								Fighter
+								Gunslinger
 							</option>
 							<option value="12">
-								Rogue
+								Marshal
 							</option>
 							<option value="10">
-								Mage
+								Ruffian
 							</option>
 							<option value="8">
-								Cleric
+								Scoundrel
 							</option>
 							<option value="-14">
-								Paladin
+								Scout
 							</option>
 							<option value="-11">
-								Ranger
+								Gadgeteer
 							</option>
 							
 							<option value="6">
-								Illusionist
+								Mentalist
 							</option>
 							
 							<option value="4">
-								Druid
+								Preacher
 							</option>
 							
 							<option value="2">
-								Bard
+								Shaman
 							</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
-					<td><label style="color: black">Level</label></td>
+					<td><label style="color: black">LEVEL</label></td>
 					<td>
 						<input name="attr_level" value="1" type="number">
 					</td>
 				</tr>
 				<tr>
-					<td><label style="color: black">Encounter Levels</label></td>
+					<td><label style="color: black">XP</label></td>
 					<td>
-						<input name="attr_encounter_levels"	value="0" type="number">
+						<input name="attr_experience_points"	value="0" type="number">
 					</td>
 				</tr>
 			</table>
 		</div>
 
-		<div class="sheet-col">
-			<table style="width: 100%;">
-				
-				<tr>
-					<td><label style="color: black">Hit Points (HP)</label></td>
-					<td nowrap>
-						<input name="attr_hit_points" value="14" title="(STR + 1d6/level)" type="number">\<input name="attr_hit_points_max" value="14" title="(STR + 1d6/level)" type="number" />
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Armor Class (AC)</label></td>
-					<td>
-						<input disabled="true" name="attr_armor_class" title="(10 + DEX Bonus + Armor Bonus)" type="number" value="10 + @{draw_bonus} + @{armor_bonus} + @{armor_mod} + @{shield_bonus} + @{shield_mod}">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Magic Difficulty Class (DC)</label></td>
-					<td>
-						<input disabled="true" name="attr_caster_dc" title="(10 + Level + Wits Bonus)" 
-						type="number" value="@{level}+@{wits_bonus}+10+@{caster_dc_mod}">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black"title="Any Miscellaneous Modifiers to the caster's DC">Caster DC Mod</label></td>
-					<td>
-						<input  name="attr_caster_dc_mod"
-						type="number" value="0">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Melee Attack Bonus</label></td>
-					<td>
-						<input class="sheet-short" disabled="true" name=
-						"attr_melee_attack_bonus" title=
-						"(Grit Bonus + Level)" type="number" value=
-						"@{grit_bonus} + @{level}">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Missile/Ranged Attack Bonus</label></td>
-					<td>
-						<input class="sheet-short" disabled="true" name=
-						"attr_missile_attack_bonus" title=
-						"(Draw Bonus + Level)" type="number" value=
-						"@{draw_bonus} + @{level}">
-					</td>
-				</tr>
-			</table>
-		</div>
+
 	</div>
 	<hr>
 
-	<div class="sheet-3colrow">
+	<div class="sheet-2colrow">
 		<h1 style="text-align: center; font-family: 'Sancreek';">Stats/Attributes</h1>
 		<div class="sheet-col">
 			<table class="sheet-table">
@@ -257,9 +196,7 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
-	<hr>
-	<div class="sheet-3colrow">
+
 		<h1 style="text-align: center; font-family: 'Sancreek';">Skills</h1>
 		<div class="sheet-col">
 			<table class="sheet-table">

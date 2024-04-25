@@ -3,8 +3,7 @@
 
 .charsheet label {
 display: inline-block;
-font-family: 'Old Standard TT';
-color:#000000;
+font-family: 'Sancreek';
 }
 .charsheet input {
 display: inline-block;
@@ -19,6 +18,7 @@ padding-right: 4px;
 .charsheet input.sheet-short {
 width: 3.5em;
 }
+
 /*
 .charsheet {
 background-image: url("https://i.postimg.cc/3J5K9CM2/wp2021815.jpg");
@@ -34,12 +34,11 @@ vertical-align: top;
 }
 /*addresses the majority of the label text in the character sheet*/
 .sheet-table td, .sheet-table th{
-	/*font-size: 1.2em;
+	font-size: 1.2em;
 	font-weight: bold;
-	font-family: 'Arial';
+	font-family: 'Sancreek';
 	text-align: center;
 	padding: 5px;
-	color: black;*/
 }
 
 input[type="number"] {
