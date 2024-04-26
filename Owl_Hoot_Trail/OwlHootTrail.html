@@ -142,8 +142,8 @@
 				<thead>
 						<th><label style="color: black"></label></th>
 						<th><label style="color: black">Total</label></th>
-						<th><label style="color: black">Base</label></th>
-						<th><label style="color: black">Race</label></th>
+						<th><label style="color: black">Level</label></th>
+						<th><label style="color: black">Ability</label></th>
 						<th><label style="color: black">Class</label></th>
 						<th title="Miscellaneous Stat Modifier"><label style="color: black; font-family: 'IM Fell Great Primer SC'">Temp</label></th>
 				</thead>
@@ -421,64 +421,111 @@
 
 <!-- Beginning of "Combat" tab -->
 <div class="sheet-section sheet-section-combat">
-	<div class="sheet-3colrow">
+	<div class="sheet-2colrow">
 		<div class="sheet-col">
-			<h3 style="text-align: center;">Armor</h3>
+
+			<h2 style="text-align: center; font-family: 'Sancreek';">HIT POINTS</h2>
+			
 			<table class="sheet-table">
-				<tr>
-					<td><label style="color: black">Name</label></td>
-					<td>
-						<input name="attr_armor_name" value="Armor Name" type="text">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Bonus</label></td>
-					<td>
-						<input name="attr_armor_bonus" value="0" type="number">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black"title="Miscellaneous Modifier">Misc Mod</label></td>
-					<td>
-						<input name="attr_armor_mod" value="0" type="number">
-					</td>
-				</tr>
+				<thead>
+					<th><label style="color: black; text-align: center;">Max</label></th>
+					<th><label style="color: black; text-align: center;">Current</label></th>
+					<th><label style="color: black; text-align: center;">Temp</label></th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input style="width: 50px:" name="attr_hp_max" type="text">
+						</td>	
+						<td>
+							<input style="width: 50px:" name="attr_hp_current" type="text">
+						</td>	
+						<td>
+							<input style="width: 50px:" name="attr_hp_temp" type="text">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="color: black; padding-top: 16px;"title="Select your token before clicking to get added to the Turn Table">Initiative Roll</label></td>
+						</td>
+						<td>
+							<button type="roll" value="&{template:default} {{name=Initiative Roll}} {{Roll Result=[[d20+[[(@{draw_bonus})]] &{tracker}]]}}" title="d20 + Draw Bonus"></button>
+						</td>
+					</tr>					
+				</tbody>
 			</table>
+			
+		</div>
+		<div class="sheet-col">
+			<h2 style="text-align: center;">INJURY & RECOVERY</h2>
+			<textarea name="attr_injury" style="height: 100px; width: 95%; font-family: 'Old Standard TT'; color: black;"></textarea>
+		</div>
+	</div>
+	<div class="sheet-2colrow">
+		<div class="sheet-col">
+			<h2 style="text-align: center;">ATTACK BONUSES</h2>
+				<div class="sheet-col">
+					<table class="sheet-table">
+						<thead>
+							<th><label style="color: black"></label></th>
+							<th><label style="color: black">Total</label></th>
+							<th><label style="color: black">Level</label></th>
+							<th><label style="color: black">Ability</label></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td><label style="color: black">Melee</label></td>
+								<td><input class="sheet-short" name="attr_melee_total" value="0" type="number"></td>
+								<td>
+									<input class="sheet-short" name="attr_melee_level" type="number" value="0">
+								</td>
+								<td>
+									<input class="sheet-short" name="attr_melee_ability" disabled="true" value="@{grit}+@{grit_modifier}" type="number">
+								</td>
+							</tr>
+							<tr>
+								<td><label style="color: black">Missile</label></td>
+						
+								<td><input class="sheet-short" name="attr_missile_total" value="0" type="number"></td>
+								<td>
+									<input class="sheet-short" name="attr_missile_level" type="number" value="0">
+								</td>
+								<td>
+									<input class="sheet-short" name="attr_missile_ability" disabled="true" value="@{grit}+@{grit_modifier}" type="number">
+								</td>
+							</tr>
+							<tr>
+								<td><label style="color: black">Power</label></td>
+						
+								<td><input class="sheet-short" name="attr_power_total" value="0" type="number"></td>
+								<td>
+									<input class="sheet-short" name="attr_power_level" type="number" value="0">
+								</td>
+								<td>
+									<input class="sheet-short" name="attr_power_ability" disabled="true" value="@{grit}+@{grit_modifier}" type="number">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 style="text-align: left;">Notes</h3>
+					<textarea name="attr_attack_bonus_notes" style="height: 100px; width: 95%; font-family: 'Old Standard TT'; color: black;"></textarea>
+				</div>
+		</div>
+				
 			
 			
 			
 		</div>
 		<div class="sheet-col">
-			<h3 style="text-align: center;">Shield</h3>
+			<h2 style="text-align: center;">DEFENSES</h2>
 			<table class="sheet-table">
-				<tr>
-					<td><label style="color: black">Name</label></td>
-					<td>
-						<input name="attr_shield_name" value="Shield Name" type="text">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black">Bonus</label></td>
-					<td>
-						<input name="attr_shield_bonus" value="0" type="number">
-					</td>
-				</tr>
-				<tr>
-					<td><label style="color: black"title="Miscellanous Modifier">Misc Mod</label></td>
-					<td>
-						<input name="attr_shield_mod" value="0" type="number">
-					</td>
-				</tr>
+	
 			</table>
 		</div>
+		<!-- I don't think save rolls exist in OHT...
 		<div class="sheet-col">
 			<table class="sheet-table">
-				<tr>
-					<td><label style="color: black"title="Select your token before clicking to get added to the Turn Table">Initiative Roll</label></td>
-					<td>
-						<button type="roll" value="&{template:default} {{name=Initiative Roll}} {{Roll Result=[[d20+[[(@{draw_bonus})]] &{tracker}]]}}" title="d20 + Draw Bonus"></button>
-					</td>
-				</tr>
+				
 			</table>
 			<hr>
 			<h3 style="text-align: center;">Save Rolls</h3>
@@ -510,6 +557,7 @@
 				</tbody>
 			</table>
 		</div>
+		-->
 	</div>
 	<hr>
 	<h1 style="text-align: center;">Weapons</h1>

@@ -12,6 +12,13 @@ font-family: 'Old Standard TT';
 color: black;
 }
 
+.charsheet h2 {
+	font-family: 'Sancreek';
+}
+.charsheet h3 {
+	font-family: 'IM Fell Great Primer SC';
+}
+
 .charsheet select {
 	font-family: 'Old Standard TT';
 	color: black;
@@ -22,7 +29,10 @@ font-weight: bold;
 padding-right: 0px;
 }
 .charsheet input.sheet-short {
-width: 1.5em;
+width: 50px;
+font-family: 'Old Standard TT';
+color: black;
+}
 }
 
 
